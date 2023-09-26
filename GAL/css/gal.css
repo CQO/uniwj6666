@@ -1,0 +1,80 @@
+
+@import './animate.css';
+@import './icon.css';
+
+.gal-body{padding:0 30rpx;}
+.gal-margin-top{margin-top:30rpx;}
+.gal-margin-top-large{margin-top:50rpx;}
+
+/* flex 布局 */
+.gal-flex{display:flex;}
+.gal-rows{flex-direction:row;}
+.gal-columns{flex-direction:column;}
+.gal-wrap{flex-direction:row; flex-wrap:wrap;}
+.gal-nowrap{flex-direction:row; flex-wrap:nowrap;}
+.gal-space-around{justify-content:space-around;}
+.gal-space-between{justify-content:space-between;}
+.gal-justify-content-start{justify-content:flex-start;}
+.gal-justify-content-center{justify-content:center;}
+.gal-justify-content-end{justify-content:flex-end;}
+.gal-align-items-start{align-items:flex-start;}
+.gal-align-items-center{align-items:center;}
+.gal-align-items-end{align-items:flex-end;}
+.gal-flex1{flex:1;}
+
+/* 颜色 */
+.gal-color-white{color:#FFFFFF;}
+.gal-color-gray{color:rgba(69, 90, 100, 0.6) !important;}
+.gal-color-gray-light{color:rgba(69, 90, 100, 0.3) !important;}
+.gal-bg-gray{background-color:rgba(200, 200, 200, 0.2);}
+.gal-border-radius{border-radius:10rpx;}
+
+/* 文本 */
+.gal-block-text{display:block;}
+.gal-text-center{text-align:center;}
+.gal-text{font-size:28rpx;}
+.gal-text-small{font-size:22rpx;}
+.gal-h1{font-size:80rpx;}
+.gal-h2{font-size:60rpx;}
+.gal-h3{font-size:45rpx;}
+.gal-h4{font-size:32rpx;}
+.gal-h5{font-size:30rpx;}
+.gal-h6{font-size:28rpx;}
+.gal-textarea{padding:20rpx; font-size:28rpx; height:200rpx; border-radius:5rpx;}
+
+.gal-picker-wrap{margin:15rpx; border-top:1px solid #23A6D5; border-bottom:1px solid #23A6D5; padding:25rpx 0;}
+.gal-picker-text{font-size:26rpx; line-height:50rpx;}
+
+.gal-textarea{padding:20rpx;}
+.gal-border-box{box-sizing:border-box;}
+
+/* 点击效果 */
+.gal-tap{opacity:0.88;}
+
+/* 提交按钮 */
+.gal-sbutton{width:230rpx; height:80rpx; border-radius:8rpx; padding:0; margin:0;}
+.gal-sbutton-text{font-size:30rpx; line-height:80rpx; text-align:center; color:#FFFFFF;}
+.gal-sbutton-loading-point{width:8rpx; height:8rpx; border-radius:8rpx; margin:8rpx; background-color:#FFFFFF;}
+.gal-sbutton-default{background-color:#3688FF;}
+.gal-sbutton-loading{background-color:#3688FF; opacity:0.8;}
+.gal-sbutton-success{background-color:#07C160 !important;}
+.gal-sbutton-fail{background-color:#FF0036 !important;}
+
+/* 动画 */
+@keyframes gal-fade-in{
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes gal-fade-out{
+	0%   { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+.gal-animate-bg{
+	background-size:400% 400%;
+}
+@keyframes gal-animate-bg{
+	0%   { background-position: 0% 50% }
+	50%  { background-position: 100% 50% }
+	100% { background-position: 0% 50% }
+}

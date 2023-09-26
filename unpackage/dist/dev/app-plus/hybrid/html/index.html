@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible " content="IE=edge" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>在线咨询</title>
+		<script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js">
+		</script>
+		<style>
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0
+			}
+		</style>
+	</head>
+	<body>
+		<script type='text/javascript'>
+			function getQuery(name) {
+				// 正则：[找寻'&' + 'url参数名字' = '值' + '&']（'&'可以不存在）
+				let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				let r = window.location.search.substr(1).match(reg);
+				console.log(r);
+				if (r != null) {
+					// 对参数值进行解码
+					return decodeURIComponent(r[2]);
+				}
+				return null;
+			}
+			(function(a, b, c, d, e, j, s) {
+				a[d] = a[d] || function() {
+					(a[d].a = a[d].a || []).push(arguments)
+				};
+				j = b.createElement(c),
+					s = b.getElementsByTagName(c)[0];
+				j.async = true;
+				j.charset = 'UTF-8';
+				j.src = 'https://static.meiqia.com/widget/loader.js';
+				s.parentNode.insertBefore(j, s);
+			})(window, document, 'script', '_MEIQIA');
+			_MEIQIA('entId', '74c62e63b0c9af6949ad03bb288e5db1');
+			_MEIQIA('showPanel');
+
+			
+			// 传递顾客信息
+			_MEIQIA('metadata', {
+				name: getQuery('nickname'),
+				comment: getQuery('usermoney')
+			});
+			//点击关闭按钮后的回调
+			_MEIQIA('beforeCloseWindow', handleBeforeCloseWindow);
+			function handleBeforeCloseWindow(){
+				uni.navigateBack({
+					delta:1
+				})
+			}
+		</script>
+	</body>
+</html>
